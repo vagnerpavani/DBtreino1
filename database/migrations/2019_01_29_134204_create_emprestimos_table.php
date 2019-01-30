@@ -25,7 +25,7 @@ class CreateEmprestimosTable extends Migration
         });
 
         Schema::table('emprestimos', function (Blueprint $table) {
-            $table->foreign('idCliente')->references('id')->on('clientes');
+            $table->foreign('idCliente')->references('id')->on('clients');
         });
         Schema::table('emprestimos', function (Blueprint $table) {
             $table->foreign('idLivro')->references('id')->on('livros');
