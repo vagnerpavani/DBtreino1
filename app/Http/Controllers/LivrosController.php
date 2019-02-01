@@ -25,7 +25,8 @@ class LivrosController extends Controller
         return Livros::all();
     }
     public function acha($id){
-        return Livros::find($id);
+        $livro = Livros::findOrFail($id);
+        return response()->json([$livro])
     }
 
     public function deleta($id){
